@@ -54,7 +54,15 @@ class MainMenu extends Phaser.Scene {
     bg = this.add.image(480, 360, "bg");
 
     let card1 = ["king", "dragon", "wolf", "bear", "snake", "panter", "staff"];
-    let card2 = ["sheild", "flame", "fruit", "ogre", "centaur", "troll", "devil"];
+    let card2 = [
+      "sheild",
+      "flame",
+      "fruit",
+      "ogre",
+      "centaur",
+      "troll",
+      "devil",
+    ];
     let left = 0;
     let left1 = 0;
     let j = 120;
@@ -164,7 +172,9 @@ class Game extends Phaser.Scene {
       "devil",
     ];
     poolNpc = Phaser.Utils.Array.Shuffle(cards).slice(4);
+
     ground = this.add.image(480, 300, "bg");
+
     info = this.add
       .text(this.cameras.main.width / 2, 580, "", {
         fontFamily: "Humongous of Eternity St",
@@ -236,7 +246,6 @@ class Game extends Phaser.Scene {
               .setShadow(1.5, 1, "#965515", 1)
               .setOrigin(0.5);
           }
-          
         } else {
           start.setVisible(true);
           play.setVisible(false);
@@ -294,13 +303,15 @@ class GameOver extends Phaser.Scene {
       .setShadow(1.5, 1, "#965515", 1)
       .setOrigin(0.5);
 
-    info.setText(`
-                   Written by
+    info.setText(`            Written by :
 
 
            Behnam Beiki
-  
-    https://behnambeiki.ir/
+
+          -VirtualLich-
+    
+  behnam_beiki@yahoo.com
+    
     `);
 
     start.on(
@@ -318,6 +329,7 @@ let config = {
   type: Phaser.AUTO,
   width: 960,
   height: 720,
+  // backgroundColor: '#000000',
   scene: [Preloader, MainMenu, Game, GameOver],
 };
 

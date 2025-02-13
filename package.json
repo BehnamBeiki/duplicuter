@@ -6,12 +6,9 @@
   "scripts": {
     "start": "lite-server"
   },
-  "author": "BehnamBeiki",
-  "license": "BB",
+  "author": "VirtualLich",
+  "license": "VL",
   "devDependencies": {
     "lite-server": "^2.5.4"
-  },
-  "dependencies": {
-    "phaser": "^3.87.0"
   }
 }
