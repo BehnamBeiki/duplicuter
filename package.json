@@ -12,6 +12,7 @@
     "lite-server": "^2.5.4"
   },
   "dependencies": {
-    "phaser": "^3.88.1"
+    "phaser": "^3.88.1",
+    "webpack": "^5.97.1"
   }
 }
